@@ -315,7 +315,7 @@ def install_controller():
     '''
     Install Cozy Controller Application Manager. Daemonize with supervisor.
     '''
-    sudo('npm install -g git+ssh://git@github.com/roblabla/cozy-controller.git')
+    sudo('npm install -g git+https://github.com/roblabla/cozy-controller.git')
     sudo('mkdir -p /etc/cozy')
     sudo('mkdir -p /etc/cozy/pids')
     require.files.file(
@@ -356,7 +356,7 @@ def install_controller_dev():
     '''
     Install Cozy Controller Application Manager. Daemonize with supervisor.
     '''
-    sudo('npm install -g git+ssh://git@github.com/roblabla/cozy-controller.git')
+    sudo('npm install -g git+https://github.com/roblabla/cozy-controller.git')
     require.supervisor.process(
         'cozy-controller',
         command='cozy-controller -c -u --per 755',
